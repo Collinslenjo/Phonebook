@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsComponent, AddContactDialog } from './contacts/contacts.component';
 import { PopularComponent } from './popular/popular.component';
 
 import { ContactsService } from './contacts.service'
@@ -21,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ContactsComponent,
-    PopularComponent
+    PopularComponent,
+    AddContactDialog
   ],
   imports: [
     BrowserModule,
@@ -29,8 +31,10 @@ const routes: Routes = [
     HttpModule,
     MaterialModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
   ],
   providers: [ContactsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AddContactDialog]
 })
 export class AppModule { }
