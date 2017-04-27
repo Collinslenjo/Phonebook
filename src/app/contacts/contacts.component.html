@@ -1,0 +1,8 @@
+<md-nav-list>
+	<md-list-item *ngFor="let contact of contacts">
+		<h4 md-line>{{contact.name}}</h4>
+		<p md-line>{{contact.number}}</p>
+	</md-list-item>
+</md-nav-list>
+
+<button md-mini-fab class="add-contact-fab" (click)="add">Add Contact</button>
