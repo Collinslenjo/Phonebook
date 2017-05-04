@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 // Gzip
-const compression = require(‘compression’);
+const compression = require('compression');
 app.use(compression());
 // Run the app by serving the static files
 // in the dist directory
